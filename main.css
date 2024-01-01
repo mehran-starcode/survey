@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Vina+Sans&display=swap");
+@font-face {
+  font-family: "Behdad";
+  src: url("//cdn.font-store.ir/fonts/behdad/Behdad-Regular.woff2") format("woff2"), url("//cdn.font-store.ir/fonts/behdad/Behdad-Regular.woff") format("woff"), url("//cdn.font-store.ir/fonts/behdad/Behdad-Regular.ttf") format("truetype"), url("//cdn.font-store.ir/fonts/behdad/Behdad-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+/*
+font-family: 'Roboto', sans-serif;
+font-family: 'Vina Sans', sans-serif;
+*/
+* {
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100dvh;
+  background-color: #282828;
+}
+body .cont-1 {
+  display: flex;
+  align-items: center;
+  margin-top: 0.4vh;
+  width: 95%;
+  height: 10vh;
+  border-radius: 20px;
+  background-color: #171717;
+}
+body .cont-1 .question-1 {
+  margin-right: 2vw;
+  color: bisque;
+  font-size: 27px;
+}
+
+/*# sourceMappingURL=main.css.map */
