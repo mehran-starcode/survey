@@ -1,4 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Vina+Sans&display=swap");
+@keyframes show-thankPage {
+  to {
+    background-color: rgba(19, 21, 28, 0.65);
+    backdrop-filter: blur(5px);
+  }
+}
+@keyframes show-message-thankPage {
+  to {
+    margin-left: 0;
+  }
+}
 @font-face {
   font-family: "Behdad";
   src: url("//cdn.font-store.ir/fonts/behdad/Behdad-Regular.woff2") format("woff2"), url("//cdn.font-store.ir/fonts/behdad/Behdad-Regular.woff") format("woff"), url("//cdn.font-store.ir/fonts/behdad/Behdad-Regular.ttf") format("truetype"), url("//cdn.font-store.ir/fonts/behdad/Behdad-Regular.otf") format("opentype");
@@ -19,11 +30,46 @@ font-family: 'Vina Sans', sans-serif;
 body {
   display: flex;
   width: 100vw;
-  height: 100dvh;
   background-color: #282828;
   color: bisque;
 }
-body .btn {
+body .main-page {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .main-page .thank-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+body .main-page .thank-page .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  margin-left: 180vw;
+}
+body .main-page .thank-page .text span {
+  font-size: 30px;
+}
+body .main-page .thank-page img {
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 40dvh;
+  margin-left: 180vw;
+  border-radius: 100px;
+}
+body .main-page .btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,10 +78,10 @@ body .btn {
   padding: 0.5vh 0 0 0;
   width: 30%;
 }
-body input {
+body .main-page input {
   text-align: center;
   width: 60%;
-  height: 90%;
+  height: 6dvh;
   margin-bottom: 2vh;
   font-size: 17px;
   font-weight: bold;
@@ -43,13 +89,42 @@ body input {
   background-color: bisque;
   border-radius: 10px;
 }
-body input:focus {
+body .main-page input:focus {
   background-color: rgb(255, 255, 255);
 }
-body .main-page {
+body .main-page textarea {
+  padding: 1vh;
+  font-size: 17px;
+  width: 100%;
+  height: 20dvh;
+  background-color: bisque;
+  border-radius: 7px;
+}
+body .main-page textarea:focus {
+  background-color: #fff8ef;
+}
+body .main-page .submit {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  padding: 0.5vh 0 0 0;
+  width: 95%;
+  height: 10dvh;
+  border-radius: 20px;
+  background-color: rgba(0, 128, 0, 0.93);
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  font-size: 20px;
+  font-weight: bold;
+  color: bisque;
+}
+body .main-page .submit:active {
+  background-color: #048a04;
+  box-shadow: 0 0 2px 5px #1e1e1e;
+}
+body .main-page > h1 {
+  margin-top: 1dvh;
+  text-shadow: 6px 6px 5px #181818;
 }
 body .main-page .cont-question {
   display: flex;
