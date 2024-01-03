@@ -130,7 +130,7 @@ Variables.btns_q8.forEach(item=>{
 //*******************************************************************************
 
 Variables.btns_q9.forEach(item=>{
-    item.addEventListener('click',event=>{
+    item.addEventListener('touch',event=>{
 
         Variables.btns_q9.forEach(item=>{
             item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
