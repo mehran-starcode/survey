@@ -4,26 +4,45 @@ let this_data = {1:'', 2:'', 3:'', 4:'', 5:'', 6:'', 7:'', 8:'', 9:'', 10:'', 11
     16:{1:'', 2:'', 3:'', 4:'', 5:'', 6:'', 7:'', 8:'', 9:'', 10:'', 11:'', 12:'', 'other':''},
     'idea':''
 }
-
+let touchType = 'immobile'
 // rgba(0, 0, 0, 0)
 // rgb(255, 228, 196)   بیسکوییتی
 
 //*******************************************************************************
 Variables.btns_q1.forEach(item=>{
-    item.addEventListener('touchstart',event=>{
 
-        Variables.btns_q1.forEach(item=>{
-            item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
-        })
 
-        // --------------------
+    item.addEventListener('touchmove',event=>{
 
-        if (this_data[1] === event.target.innerHTML){
-            this_data[1] = ''
-        }else {
-            this_data[1] = event.target.innerHTML
-            event.target.style.cssText = `background-color: rgb(255, 228, 196);color: ${color_dark};`
+        touchType = 'mobile'
+
+    })
+
+
+
+    item.addEventListener('touchend',event=>{
+
+        if (touchType==='immobile'){
+
+            Variables.btns_q1.forEach(item=>{
+                item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
+            })
+
+            // --------------------
+
+            if (this_data[1] === event.target.innerHTML){
+                this_data[1] = ''
+            }else {
+                this_data[1] = event.target.innerHTML
+                event.target.style.cssText = `background-color: rgb(255, 228, 196);color: ${color_dark};`
+            }
+
         }
+
+        touchType = 'immobile'
+
+
+
 
     })
 })
@@ -48,20 +67,38 @@ Variables.btns_q1.forEach(item=>{
 //*******************************************************************************
 
 Variables.btns_q4.forEach(item=>{
-    item.addEventListener('touchstart',event=>{
 
-        Variables.btns_q4.forEach(item=>{
-            item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
-        })
 
-        // --------------------
+    item.addEventListener('touchmove',event=>{
 
-        if (this_data[4] === event.target.innerHTML){
-            this_data[4] = ''
-        }else {
-            this_data[4] = event.target.innerHTML
-            event.target.style.cssText = `background-color: rgb(255, 228, 196);color: ${color_dark};`
+        touchType = 'mobile'
+
+    })
+
+
+
+    item.addEventListener('touchend',event=>{
+
+
+        if (touchType==='immobile'){
+
+            Variables.btns_q4.forEach(item=>{
+                item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
+            })
+
+            // --------------------
+
+            if (this_data[4] === event.target.innerHTML){
+                this_data[4] = ''
+            }else {
+                this_data[4] = event.target.innerHTML
+                event.target.style.cssText = `background-color: rgb(255, 228, 196);color: ${color_dark};`
+            }
+
         }
+
+        touchType = 'immobile'
+
 
     })
 })
@@ -86,20 +123,36 @@ Variables.btns_q4.forEach(item=>{
 //*******************************************************************************
 
 Variables.btns_q7.forEach(item=>{
-    item.addEventListener('touchstart',event=>{
 
-        Variables.btns_q7.forEach(item=>{
-            item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
-        })
 
-        // --------------------
+    item.addEventListener('touchmove',event=>{
 
-        if (this_data[7] === event.target.innerHTML){
-            this_data[7] = ''
-        }else {
-            this_data[7] = event.target.innerHTML
-            event.target.style.cssText = `background-color: rgb(255, 228, 196);color: ${color_dark};`
+        touchType = 'mobile'
+
+    })
+
+
+    item.addEventListener('touchend',event=>{
+
+        if (touchType==='immobile'){
+
+            Variables.btns_q7.forEach(item=>{
+                item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
+            })
+
+            // --------------------
+
+            if (this_data[7] === event.target.innerHTML){
+                this_data[7] = ''
+            }else {
+                this_data[7] = event.target.innerHTML
+                event.target.style.cssText = `background-color: rgb(255, 228, 196);color: ${color_dark};`
+            }
+
         }
+
+        touchType = 'immobile'
+
 
     })
 })
@@ -108,20 +161,37 @@ Variables.btns_q7.forEach(item=>{
 //*******************************************************************************
 
 Variables.btns_q8.forEach(item=>{
-    item.addEventListener('touchstart',event=>{
 
-        Variables.btns_q8.forEach(item=>{
-            item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
-        })
 
-        // --------------------
+    item.addEventListener('touchmove',event=>{
 
-        if (this_data[8] === event.target.innerHTML){
-            this_data[8] = ''
-        }else {
-            this_data[8] = event.target.innerHTML
-            event.target.style.cssText = `background-color: rgb(255, 228, 196);color: ${color_dark};`
+        touchType = 'mobile'
+
+    })
+
+
+    item.addEventListener('touchend',event=>{
+
+
+        if (touchType==='immobile'){
+
+            Variables.btns_q8.forEach(item=>{
+                item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
+            })
+
+            // --------------------
+
+            if (this_data[8] === event.target.innerHTML){
+                this_data[8] = ''
+            }else {
+                this_data[8] = event.target.innerHTML
+                event.target.style.cssText = `background-color: rgb(255, 228, 196);color: ${color_dark};`
+            }
+
         }
+
+        touchType = 'immobile'
+
 
     })
 })
@@ -130,42 +200,77 @@ Variables.btns_q8.forEach(item=>{
 //*******************************************************************************
 
 Variables.btns_q9.forEach(item=>{
-    item.addEventListener('touchstart',event=>{
 
-        Variables.btns_q9.forEach(item=>{
-            item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
-        })
 
-        // --------------------
+    item.addEventListener('touchmove',event=>{
 
-        if (this_data[9] === event.target.innerHTML){
-            this_data[9] = ''
-        }else {
-            this_data[9] = event.target.innerHTML
-            event.target.style.cssText = `background-color: rgb(255, 228, 196);color: ${color_dark};`
+        touchType = 'mobile'
+
+    })
+
+
+    item.addEventListener('touchend',event=>{
+
+        if (touchType==='immobile'){
+
+
+            Variables.btns_q9.forEach(item=>{
+                item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
+            })
+
+            // --------------------
+
+            if (this_data[9] === event.target.innerHTML){
+                this_data[9] = ''
+            }else {
+                this_data[9] = event.target.innerHTML
+                event.target.style.cssText = `background-color: rgb(255, 228, 196);color: ${color_dark};`
+            }
+
         }
+
+        touchType = 'immobile'
+
 
     })
 })
 
 
+
 //*******************************************************************************
 
 Variables.btns_q10.forEach(item=>{
-    item.addEventListener('touchstart',event=>{
 
-        Variables.btns_q10.forEach(item=>{
-            item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
-        })
 
-        // --------------------
+    item.addEventListener('touchmove',event=>{
 
-        if (this_data[10] === event.target.innerHTML){
-            this_data[10] = ''
-        }else {
-            this_data[10] = event.target.innerHTML
-            event.target.style.cssText = `background-color: rgb(255, 228, 196);color: ${color_dark};`
+        touchType = 'mobile'
+
+    })
+
+
+    item.addEventListener('touchend',event=>{
+
+
+        if (touchType==='immobile'){
+
+            Variables.btns_q10.forEach(item=>{
+                item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
+            })
+
+            // --------------------
+
+            if (this_data[10] === event.target.innerHTML){
+                this_data[10] = ''
+            }else {
+                this_data[10] = event.target.innerHTML
+                event.target.style.cssText = `background-color: rgb(255, 228, 196);color: ${color_dark};`
+            }
+
         }
+
+        touchType = 'immobile'
+
 
     })
 })
@@ -174,20 +279,36 @@ Variables.btns_q10.forEach(item=>{
 //*******************************************************************************
 
 Variables.btns_q11.forEach(item=>{
-    item.addEventListener('touchstart',event=>{
 
-        Variables.btns_q11.forEach(item=>{
-            item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
-        })
 
-        // --------------------
+    item.addEventListener('touchmove',event=>{
 
-        if (this_data[11] === event.target.innerHTML){
-            this_data[11] = ''
-        }else {
-            this_data[11] = event.target.innerHTML
-            event.target.style.cssText = `background-color: rgb(255, 228, 196);color: ${color_dark};`
+        touchType = 'mobile'
+
+    })
+
+
+    item.addEventListener('touchend',event=>{
+
+
+        if (touchType==='immobile'){
+
+            Variables.btns_q11.forEach(item=>{
+                item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
+            })
+
+            // --------------------
+
+            if (this_data[11] === event.target.innerHTML){
+                this_data[11] = ''
+            }else {
+                this_data[11] = event.target.innerHTML
+                event.target.style.cssText = `background-color: rgb(255, 228, 196);color: ${color_dark};`
+            }
+
         }
+
+        touchType = 'immobile'
 
     })
 })
@@ -219,20 +340,35 @@ Variables.btns_q11.forEach(item=>{
 //*******************************************************************************
 
 Variables.btns_q15.forEach(item=>{
-    item.addEventListener('touchstart',event=>{
 
-        Variables.btns_q15.forEach(item=>{
-            item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
-        })
 
-        // --------------------
+    item.addEventListener('touchmove',event=>{
 
-        if (this_data[15] === event.target.innerHTML){
-            this_data[15] = ''
-        }else {
-            this_data[15] = event.target.innerHTML
-            event.target.style.cssText = `background-color: rgb(255, 228, 196);color: ${color_dark};`
+        touchType = 'mobile'
+
+    })
+
+
+    item.addEventListener('touchend',event=>{
+
+        if (touchType==='immobile'){
+
+            Variables.btns_q15.forEach(item=>{
+                item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
+            })
+
+            // --------------------
+
+            if (this_data[15] === event.target.innerHTML){
+                this_data[15] = ''
+            }else {
+                this_data[15] = event.target.innerHTML
+                event.target.style.cssText = `background-color: rgb(255, 228, 196);color: ${color_dark};`
+            }
+
         }
+
+        touchType = 'immobile'
 
     })
 })
@@ -242,20 +378,35 @@ Variables.btns_q15.forEach(item=>{
 //*******************************************************************************
 
 Variables.btns_q16_1.forEach(item=>{
-    item.addEventListener('touchstart',event=>{
 
-        Variables.btns_q16_1.forEach(item=>{
-            item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
-        })
 
-        // --------------------
+    item.addEventListener('touchmove',event=>{
 
-        if (this_data[16][1] === event.target.innerHTML){
-            this_data[16][1] = ''
-        }else {
-            this_data[16][1] = event.target.innerHTML
-            event.target.style.cssText = `background-color: rgb(255, 228, 196);color: ${color_dark};`
+        touchType = 'mobile'
+
+    })
+
+
+    item.addEventListener('touchend',event=>{
+
+        if (touchType==='immobile'){
+
+            Variables.btns_q16_1.forEach(item=>{
+                item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
+            })
+
+            // --------------------
+
+            if (this_data[16][1] === event.target.innerHTML){
+                this_data[16][1] = ''
+            }else {
+                this_data[16][1] = event.target.innerHTML
+                event.target.style.cssText = `background-color: rgb(255, 228, 196);color: ${color_dark};`
+            }
+
         }
+
+        touchType = 'immobile'
 
     })
 })
@@ -264,20 +415,35 @@ Variables.btns_q16_1.forEach(item=>{
 //*******************************************************************************
 
 Variables.btns_q16_2.forEach(item=>{
-    item.addEventListener('touchstart',event=>{
 
-        Variables.btns_q16_2.forEach(item=>{
-            item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
-        })
 
-        // --------------------
+    item.addEventListener('touchmove',event=>{
 
-        if (this_data[16][2] === event.target.innerHTML){
-            this_data[16][2] = ''
-        }else {
-            this_data[16][2] = event.target.innerHTML
-            event.target.style.cssText = `background-color: rgb(255, 228, 196);color: ${color_dark};`
+        touchType = 'mobile'
+
+    })
+
+
+    item.addEventListener('touchend',event=>{
+
+        if (touchType==='immobile'){
+
+            Variables.btns_q16_2.forEach(item=>{
+                item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
+            })
+
+            // --------------------
+
+            if (this_data[16][2] === event.target.innerHTML){
+                this_data[16][2] = ''
+            }else {
+                this_data[16][2] = event.target.innerHTML
+                event.target.style.cssText = `background-color: rgb(255, 228, 196);color: ${color_dark};`
+            }
+
         }
+
+        touchType = 'immobile'
 
     })
 })
@@ -286,20 +452,35 @@ Variables.btns_q16_2.forEach(item=>{
 //*******************************************************************************
 
 Variables.btns_q16_3.forEach(item=>{
-    item.addEventListener('touchstart',event=>{
 
-        Variables.btns_q16_3.forEach(item=>{
-            item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
-        })
 
-        // --------------------
+    item.addEventListener('touchmove',event=>{
 
-        if (this_data[16][3] === event.target.innerHTML){
-            this_data[16][3] = ''
-        }else {
-            this_data[16][3] = event.target.innerHTML
-            event.target.style.cssText = `background-color: rgb(255, 228, 196);color: ${color_dark};`
+        touchType = 'mobile'
+
+    })
+
+
+    item.addEventListener('touchend',event=>{
+
+        if (touchType==='immobile'){
+
+            Variables.btns_q16_3.forEach(item=>{
+                item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
+            })
+
+            // --------------------
+
+            if (this_data[16][3] === event.target.innerHTML){
+                this_data[16][3] = ''
+            }else {
+                this_data[16][3] = event.target.innerHTML
+                event.target.style.cssText = `background-color: rgb(255, 228, 196);color: ${color_dark};`
+            }
+
         }
+
+        touchType = 'immobile'
 
     })
 })
@@ -308,20 +489,35 @@ Variables.btns_q16_3.forEach(item=>{
 //*******************************************************************************
 
 Variables.btns_q16_4.forEach(item=>{
-    item.addEventListener('touchstart',event=>{
 
-        Variables.btns_q16_4.forEach(item=>{
-            item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
-        })
 
-        // --------------------
+    item.addEventListener('touchmove',event=>{
 
-        if (this_data[16][4] === event.target.innerHTML){
-            this_data[16][4] = ''
-        }else {
-            this_data[16][4] = event.target.innerHTML
-            event.target.style.cssText = `background-color: rgb(255, 228, 196);color: ${color_dark};`
+        touchType = 'mobile'
+
+    })
+
+
+    item.addEventListener('touchend',event=>{
+
+        if (touchType==='immobile'){
+
+            Variables.btns_q16_4.forEach(item=>{
+                item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
+            })
+
+            // --------------------
+
+            if (this_data[16][4] === event.target.innerHTML){
+                this_data[16][4] = ''
+            }else {
+                this_data[16][4] = event.target.innerHTML
+                event.target.style.cssText = `background-color: rgb(255, 228, 196);color: ${color_dark};`
+            }
+
         }
+
+        touchType = 'immobile'
 
     })
 })
@@ -330,20 +526,35 @@ Variables.btns_q16_4.forEach(item=>{
 //*******************************************************************************
 
 Variables.btns_q16_5.forEach(item=>{
-    item.addEventListener('touchstart',event=>{
 
-        Variables.btns_q16_5.forEach(item=>{
-            item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
-        })
 
-        // --------------------
+    item.addEventListener('touchmove',event=>{
 
-        if (this_data[16][5] === event.target.innerHTML){
-            this_data[16][5] = ''
-        }else {
-            this_data[16][5] = event.target.innerHTML
-            event.target.style.cssText = `background-color: rgb(255, 228, 196);color: ${color_dark};`
+        touchType = 'mobile'
+
+    })
+
+
+    item.addEventListener('touchend',event=>{
+
+        if (touchType==='immobile'){
+
+            Variables.btns_q16_5.forEach(item=>{
+                item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
+            })
+
+            // --------------------
+
+            if (this_data[16][5] === event.target.innerHTML){
+                this_data[16][5] = ''
+            }else {
+                this_data[16][5] = event.target.innerHTML
+                event.target.style.cssText = `background-color: rgb(255, 228, 196);color: ${color_dark};`
+            }
+
         }
+
+        touchType = 'immobile'
 
     })
 })
@@ -352,20 +563,36 @@ Variables.btns_q16_5.forEach(item=>{
 //*******************************************************************************
 
 Variables.btns_q16_6.forEach(item=>{
-    item.addEventListener('touchstart',event=>{
 
-        Variables.btns_q16_6.forEach(item=>{
-            item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
-        })
 
-        // --------------------
+    item.addEventListener('touchmove',event=>{
 
-        if (this_data[16][6] === event.target.innerHTML){
-            this_data[16][6] = ''
-        }else {
-            this_data[16][6] = event.target.innerHTML
-            event.target.style.cssText = `background-color: rgb(255, 228, 196);color: ${color_dark};`
+        touchType = 'mobile'
+
+    })
+
+
+    item.addEventListener('touchend',event=>{
+
+
+        if (touchType==='immobile'){
+
+            Variables.btns_q16_6.forEach(item=>{
+                item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
+            })
+
+            // --------------------
+
+            if (this_data[16][6] === event.target.innerHTML){
+                this_data[16][6] = ''
+            }else {
+                this_data[16][6] = event.target.innerHTML
+                event.target.style.cssText = `background-color: rgb(255, 228, 196);color: ${color_dark};`
+            }
+
         }
+
+        touchType = 'immobile'
 
     })
 })
@@ -374,20 +601,35 @@ Variables.btns_q16_6.forEach(item=>{
 //*******************************************************************************
 
 Variables.btns_q16_7.forEach(item=>{
-    item.addEventListener('touchstart',event=>{
 
-        Variables.btns_q16_7.forEach(item=>{
-            item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
-        })
 
-        // --------------------
+    item.addEventListener('touchmove',event=>{
 
-        if (this_data[16][7] === event.target.innerHTML){
-            this_data[16][7] = ''
-        }else {
-            this_data[16][7] = event.target.innerHTML
-            event.target.style.cssText = `background-color: rgb(255, 228, 196);color: ${color_dark};`
+        touchType = 'mobile'
+
+    })
+
+
+    item.addEventListener('touchend',event=>{
+
+        if (touchType==='immobile'){
+
+            Variables.btns_q16_7.forEach(item=>{
+                item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
+            })
+
+            // --------------------
+
+            if (this_data[16][7] === event.target.innerHTML){
+                this_data[16][7] = ''
+            }else {
+                this_data[16][7] = event.target.innerHTML
+                event.target.style.cssText = `background-color: rgb(255, 228, 196);color: ${color_dark};`
+            }
+
         }
+
+        touchType = 'immobile'
 
     })
 })
@@ -396,20 +638,35 @@ Variables.btns_q16_7.forEach(item=>{
 //*******************************************************************************
 
 Variables.btns_q16_8.forEach(item=>{
-    item.addEventListener('touchstart',event=>{
 
-        Variables.btns_q16_8.forEach(item=>{
-            item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
-        })
 
-        // --------------------
+    item.addEventListener('touchmove',event=>{
 
-        if (this_data[16][8] === event.target.innerHTML){
-            this_data[16][8] = ''
-        }else {
-            this_data[16][8] = event.target.innerHTML
-            event.target.style.cssText = `background-color: rgb(255, 228, 196);color: ${color_dark};`
+        touchType = 'mobile'
+
+    })
+
+
+    item.addEventListener('touchend',event=>{
+
+        if (touchType==='immobile'){
+
+            Variables.btns_q16_8.forEach(item=>{
+                item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
+            })
+
+            // --------------------
+
+            if (this_data[16][8] === event.target.innerHTML){
+                this_data[16][8] = ''
+            }else {
+                this_data[16][8] = event.target.innerHTML
+                event.target.style.cssText = `background-color: rgb(255, 228, 196);color: ${color_dark};`
+            }
+
         }
+
+        touchType = 'immobile'
 
     })
 })
@@ -418,20 +675,36 @@ Variables.btns_q16_8.forEach(item=>{
 //*******************************************************************************
 
 Variables.btns_q16_9.forEach(item=>{
-    item.addEventListener('touchstart',event=>{
 
-        Variables.btns_q16_9.forEach(item=>{
-            item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
-        })
 
-        // --------------------
+    item.addEventListener('touchmove',event=>{
 
-        if (this_data[16][9] === event.target.innerHTML){
-            this_data[16][9] = ''
-        }else {
-            this_data[16][9] = event.target.innerHTML
-            event.target.style.cssText = `background-color: rgb(255, 228, 196);color: ${color_dark};`
+        touchType = 'mobile'
+
+    })
+
+
+    item.addEventListener('touchend',event=>{
+
+
+        if (touchType==='immobile'){
+
+            Variables.btns_q16_9.forEach(item=>{
+                item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
+            })
+
+            // --------------------
+
+            if (this_data[16][9] === event.target.innerHTML){
+                this_data[16][9] = ''
+            }else {
+                this_data[16][9] = event.target.innerHTML
+                event.target.style.cssText = `background-color: rgb(255, 228, 196);color: ${color_dark};`
+            }
+
         }
+
+        touchType = 'immobile'
 
     })
 })
@@ -441,20 +714,35 @@ Variables.btns_q16_9.forEach(item=>{
 //*******************************************************************************
 
 Variables.btns_q16_10.forEach(item=>{
-    item.addEventListener('touchstart',event=>{
 
-        Variables.btns_q16_10.forEach(item=>{
-            item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
-        })
 
-        // --------------------
+    item.addEventListener('touchmove',event=>{
 
-        if (this_data[16][10] === event.target.innerHTML){
-            this_data[16][10] = ''
-        }else {
-            this_data[16][10] = event.target.innerHTML
-            event.target.style.cssText = `background-color: rgb(255, 228, 196);color: ${color_dark};`
+        touchType = 'mobile'
+
+    })
+
+
+    item.addEventListener('touchend',event=>{
+
+        if (touchType==='immobile'){
+
+            Variables.btns_q16_10.forEach(item=>{
+                item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
+            })
+
+            // --------------------
+
+            if (this_data[16][10] === event.target.innerHTML){
+                this_data[16][10] = ''
+            }else {
+                this_data[16][10] = event.target.innerHTML
+                event.target.style.cssText = `background-color: rgb(255, 228, 196);color: ${color_dark};`
+            }
+
         }
+
+        touchType = 'immobile'
 
     })
 })
@@ -462,20 +750,36 @@ Variables.btns_q16_10.forEach(item=>{
 //*******************************************************************************
 
 Variables.btns_q16_11.forEach(item=>{
-    item.addEventListener('touchstart',event=>{
 
-        Variables.btns_q16_11.forEach(item=>{
-            item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
-        })
 
-        // --------------------
+    item.addEventListener('touchmove',event=>{
 
-        if (this_data[16][11] === event.target.innerHTML){
-            this_data[16][11] = ''
-        }else {
-            this_data[16][11] = event.target.innerHTML
-            event.target.style.cssText = `background-color: rgb(255, 228, 196);color: ${color_dark};`
+        touchType = 'mobile'
+
+    })
+
+
+    item.addEventListener('touchend',event=>{
+
+
+        if (touchType==='immobile'){
+
+            Variables.btns_q16_11.forEach(item=>{
+                item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
+            })
+
+            // --------------------
+
+            if (this_data[16][11] === event.target.innerHTML){
+                this_data[16][11] = ''
+            }else {
+                this_data[16][11] = event.target.innerHTML
+                event.target.style.cssText = `background-color: rgb(255, 228, 196);color: ${color_dark};`
+            }
+
         }
+
+        touchType = 'immobile'
 
     })
 })
@@ -484,20 +788,35 @@ Variables.btns_q16_11.forEach(item=>{
 //*******************************************************************************
 
 Variables.btns_q16_12.forEach(item=>{
-    item.addEventListener('touchstart',event=>{
 
-        Variables.btns_q16_12.forEach(item=>{
-            item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
-        })
 
-        // --------------------
+    item.addEventListener('touchmove',event=>{
 
-        if (this_data[16][12] === event.target.innerHTML){
-            this_data[16][12] = ''
-        }else {
-            this_data[16][12] = event.target.innerHTML
-            event.target.style.cssText = `background-color: rgb(255, 228, 196);color: ${color_dark};`
+        touchType = 'mobile'
+
+    })
+
+
+    item.addEventListener('touchend',event=>{
+
+        if (touchType==='immobile'){
+
+            Variables.btns_q16_12.forEach(item=>{
+                item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
+            })
+
+            // --------------------
+
+            if (this_data[16][12] === event.target.innerHTML){
+                this_data[16][12] = ''
+            }else {
+                this_data[16][12] = event.target.innerHTML
+                event.target.style.cssText = `background-color: rgb(255, 228, 196);color: ${color_dark};`
+            }
+            
         }
+
+        touchType = 'immobile'
 
     })
 })
