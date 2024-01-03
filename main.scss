@@ -105,8 +105,8 @@ body{
             display: flex;
             justify-content: center;
             align-items: center;
-            border: bisque 1px solid;
-            border-radius: 8px;
+            border: bisque .2vw solid;
+            border-radius: 3vw;
             padding: .5vh 0 0 0;
             width: 30%;
         }
@@ -120,7 +120,8 @@ body{
             font-weight: bold;
             padding: .5vh 0 0 0;
             background-color: bisque;
-            border-radius: 10px;
+            border-radius: 3vw;
+            border: none;
             
             &:focus{
                 background-color: rgb(255, 255, 255);
@@ -129,12 +130,12 @@ body{
         
         
         textarea{
-            padding: 1vh;
+            padding: 1vh 1.5vh;
             font-size: 17px;
             width: 100%;
             height: 20dvh;
             background-color: bisque;
-            border-radius: 7px;
+            border-radius: 3vw;
             
             &:focus{
                 background-color: #fff8ef;
