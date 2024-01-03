@@ -85,7 +85,7 @@ body .main-page input {
   width: 60%;
   height: 6dvh;
   margin-bottom: 2vh;
-  font-size: 17px;
+  font-size: 4.6vw;
   font-weight: bold;
   padding: 0.5vh 0 0 0;
   background-color: bisque;
@@ -97,7 +97,7 @@ body .main-page input:focus {
 }
 body .main-page textarea {
   padding: 1vh 1.5vh;
-  font-size: 17px;
+  font-size: 4.6vw;
   width: 100%;
   height: 20dvh;
   background-color: bisque;
@@ -114,10 +114,10 @@ body .main-page .submit {
   width: 95%;
   height: 10dvh;
   border-radius: 20px;
-  background-color: rgba(0, 128, 0, 0.93);
+  background-color: green;
   margin-top: 2vh;
   margin-bottom: 2vh;
-  font-size: 20px;
+  font-size: 2.4vh;
   font-weight: bold;
   color: bisque;
 }
