@@ -10,7 +10,7 @@ let this_data = {1:'', 2:'', 3:'', 4:'', 5:'', 6:'', 7:'', 8:'', 9:'', 10:'', 11
 
 //*******************************************************************************
 Variables.btns_q1.forEach(item=>{
-    item.addEventListener('click',event=>{
+    item.addEventListener('touchstart',event=>{
 
         Variables.btns_q1.forEach(item=>{
             item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
@@ -48,7 +48,7 @@ Variables.btns_q1.forEach(item=>{
 //*******************************************************************************
 
 Variables.btns_q4.forEach(item=>{
-    item.addEventListener('click',event=>{
+    item.addEventListener('touchstart',event=>{
 
         Variables.btns_q4.forEach(item=>{
             item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
@@ -86,7 +86,7 @@ Variables.btns_q4.forEach(item=>{
 //*******************************************************************************
 
 Variables.btns_q7.forEach(item=>{
-    item.addEventListener('click',event=>{
+    item.addEventListener('touchstart',event=>{
 
         Variables.btns_q7.forEach(item=>{
             item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
@@ -108,7 +108,7 @@ Variables.btns_q7.forEach(item=>{
 //*******************************************************************************
 
 Variables.btns_q8.forEach(item=>{
-    item.addEventListener('click',event=>{
+    item.addEventListener('touchstart',event=>{
 
         Variables.btns_q8.forEach(item=>{
             item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
@@ -152,7 +152,7 @@ Variables.btns_q9.forEach(item=>{
 //*******************************************************************************
 
 Variables.btns_q10.forEach(item=>{
-    item.addEventListener('click',event=>{
+    item.addEventListener('touchstart',event=>{
 
         Variables.btns_q10.forEach(item=>{
             item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
@@ -174,7 +174,7 @@ Variables.btns_q10.forEach(item=>{
 //*******************************************************************************
 
 Variables.btns_q11.forEach(item=>{
-    item.addEventListener('click',event=>{
+    item.addEventListener('touchstart',event=>{
 
         Variables.btns_q11.forEach(item=>{
             item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
@@ -219,7 +219,7 @@ Variables.btns_q11.forEach(item=>{
 //*******************************************************************************
 
 Variables.btns_q15.forEach(item=>{
-    item.addEventListener('click',event=>{
+    item.addEventListener('touchstart',event=>{
 
         Variables.btns_q15.forEach(item=>{
             item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
@@ -242,7 +242,7 @@ Variables.btns_q15.forEach(item=>{
 //*******************************************************************************
 
 Variables.btns_q16_1.forEach(item=>{
-    item.addEventListener('click',event=>{
+    item.addEventListener('touchstart',event=>{
 
         Variables.btns_q16_1.forEach(item=>{
             item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
@@ -264,7 +264,7 @@ Variables.btns_q16_1.forEach(item=>{
 //*******************************************************************************
 
 Variables.btns_q16_2.forEach(item=>{
-    item.addEventListener('click',event=>{
+    item.addEventListener('touchstart',event=>{
 
         Variables.btns_q16_2.forEach(item=>{
             item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
@@ -286,7 +286,7 @@ Variables.btns_q16_2.forEach(item=>{
 //*******************************************************************************
 
 Variables.btns_q16_3.forEach(item=>{
-    item.addEventListener('click',event=>{
+    item.addEventListener('touchstart',event=>{
 
         Variables.btns_q16_3.forEach(item=>{
             item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
@@ -308,7 +308,7 @@ Variables.btns_q16_3.forEach(item=>{
 //*******************************************************************************
 
 Variables.btns_q16_4.forEach(item=>{
-    item.addEventListener('click',event=>{
+    item.addEventListener('touchstart',event=>{
 
         Variables.btns_q16_4.forEach(item=>{
             item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
@@ -330,7 +330,7 @@ Variables.btns_q16_4.forEach(item=>{
 //*******************************************************************************
 
 Variables.btns_q16_5.forEach(item=>{
-    item.addEventListener('click',event=>{
+    item.addEventListener('touchstart',event=>{
 
         Variables.btns_q16_5.forEach(item=>{
             item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
@@ -352,7 +352,7 @@ Variables.btns_q16_5.forEach(item=>{
 //*******************************************************************************
 
 Variables.btns_q16_6.forEach(item=>{
-    item.addEventListener('click',event=>{
+    item.addEventListener('touchstart',event=>{
 
         Variables.btns_q16_6.forEach(item=>{
             item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
@@ -374,7 +374,7 @@ Variables.btns_q16_6.forEach(item=>{
 //*******************************************************************************
 
 Variables.btns_q16_7.forEach(item=>{
-    item.addEventListener('click',event=>{
+    item.addEventListener('touchstart',event=>{
 
         Variables.btns_q16_7.forEach(item=>{
             item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
@@ -396,7 +396,7 @@ Variables.btns_q16_7.forEach(item=>{
 //*******************************************************************************
 
 Variables.btns_q16_8.forEach(item=>{
-    item.addEventListener('click',event=>{
+    item.addEventListener('touchstart',event=>{
 
         Variables.btns_q16_8.forEach(item=>{
             item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
@@ -418,7 +418,7 @@ Variables.btns_q16_8.forEach(item=>{
 //*******************************************************************************
 
 Variables.btns_q16_9.forEach(item=>{
-    item.addEventListener('click',event=>{
+    item.addEventListener('touchstart',event=>{
 
         Variables.btns_q16_9.forEach(item=>{
             item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
@@ -441,7 +441,7 @@ Variables.btns_q16_9.forEach(item=>{
 //*******************************************************************************
 
 Variables.btns_q16_10.forEach(item=>{
-    item.addEventListener('click',event=>{
+    item.addEventListener('touchstart',event=>{
 
         Variables.btns_q16_10.forEach(item=>{
             item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
@@ -462,7 +462,7 @@ Variables.btns_q16_10.forEach(item=>{
 //*******************************************************************************
 
 Variables.btns_q16_11.forEach(item=>{
-    item.addEventListener('click',event=>{
+    item.addEventListener('touchstart',event=>{
 
         Variables.btns_q16_11.forEach(item=>{
             item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
@@ -484,7 +484,7 @@ Variables.btns_q16_11.forEach(item=>{
 //*******************************************************************************
 
 Variables.btns_q16_12.forEach(item=>{
-    item.addEventListener('click',event=>{
+    item.addEventListener('touchstart',event=>{
 
         Variables.btns_q16_12.forEach(item=>{
             item.style.cssText = 'background-color: transparent;color: rgb(255, 228, 196);'
@@ -533,7 +533,7 @@ Variables.btns_q16_12.forEach(item=>{
 
 
 
-Variables.submit_EL.addEventListener('click',event=>{
+Variables.submit_EL.addEventListener('touchstart',event=>{
     Variables.thankPage_EL.style.cssText = 'z-index: 1;animation: show-thankPage 500ms;animation-fill-mode: forwards;'
     console.log(this_data)
 })
