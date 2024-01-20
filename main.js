@@ -5,11 +5,29 @@ import * as Variables from "./main_Variables.js"
 const color_dark = '#171717'
 let this_data = {1:'', 2:'', 3:'', 4:'', 5:'', 6:'', 7:'', 8:'', 9:'', 10:'', 11:'', 12:'', 13:'', 14:'', 15:'',
     16:{1:'', 2:'', 3:'', 4:'', 5:'', 6:'', 7:'', 8:'', 9:'', 10:'', 11:'', 12:'', 'other':''},
-    'idea':''
+    'idea':'','userInfo':{'DateTime':'','mainIP':'','proxyIP':'','mainCountry':'','proxyCountry':''}
 }
 let touchType = 'immobile'
 // rgba(0, 0, 0, 0)
 // rgb(255, 228, 196)   بیسکوییتی
+
+
+fetch('http://ip-api.com/json')
+    .then(res => res.json())
+    .then(data => {
+        this_data['userInfo']['mainIP'] = data['query']
+        this_data['userInfo']['mainCountry'] = data['country']
+        if (data['country'] === 'Iran'){
+
+            alert('لطفا برای ارسال نظر (VPN) خودتان را روشن کنید ممنون (❁`◡´❁)')
+
+        } else {
+            this_data['userInfo']['proxyIP'] = data['query']
+            this_data['userInfo']['proxyCountry'] = data['country']
+        }
+    })
+
+
 
 
 
@@ -53,21 +71,7 @@ Variables.btns_q1.forEach(item=>{
 })
 
 
-//*******************************************************************************
 
-    Variables.input_q2.addEventListener('blur',event=>{
-
-        this_data[2] = Variables.input_q2.value
-
-    })
-
-//*******************************************************************************
-
-    Variables.input_q3.addEventListener('blur',event=>{
-
-        this_data[3] = Variables.input_q3.value
-
-    })
 
 //*******************************************************************************
 
@@ -109,21 +113,7 @@ Variables.btns_q4.forEach(item=>{
 })
 
 
-//*******************************************************************************
 
-    Variables.input_q5.addEventListener('blur',event=>{
-
-        this_data[5] = Variables.input_q5.value
-
-    })
-
-//*******************************************************************************
-
-    Variables.input_q6.addEventListener('blur',event=>{
-
-        this_data[6] = Variables.input_q6.value
-
-    })
 
 //*******************************************************************************
 
@@ -319,28 +309,7 @@ Variables.btns_q11.forEach(item=>{
 })
 
 
-//*******************************************************************************
-    Variables.textarea_q12.addEventListener('blur',event=>{
 
-        this_data[12] = Variables.textarea_q12.value
-
-    })
-
-//*******************************************************************************
-
-    Variables.textarea_q13.addEventListener('blur',event=>{
-
-        this_data[13] = Variables.textarea_q13.value
-
-    })
-
-//*******************************************************************************
-
-    Variables.textarea_q14.addEventListener('blur',event=>{
-
-        this_data[14] = Variables.textarea_q14.value
-
-    })
 
 //*******************************************************************************
 
@@ -827,47 +796,64 @@ Variables.btns_q16_12.forEach(item=>{
 })
 
 
-//*******************************************************************************
 
-    Variables.textarea_q16_other.addEventListener('blur',event=>{
-
-        this_data[16]['other'] = Variables.textarea_q16_other.value
-
-    })
 
 //*******************************************************************************
-
-    Variables.textarea_q17.addEventListener('blur',event=>{
-        // --------------------
-        this_data[17] = Variables.textarea_q17.value
-
-    })
-
-//*******************************************************************************
-
-
-
-
-
-
-
-
-
-
-
-
-
-Variables.submit_EL.addEventListener('touchstart',event=>{
-    Variables.thankPage_EL.style.cssText = 'z-index: 1;animation: show-thankPage 500ms;animation-fill-mode: forwards;'
-    console.log(this_data)
-})
-
-
-
-
-
 
 Variables.thankPage_EL.addEventListener('animationend',event=>{
     Variables.text_thankPage_EL.style.cssText = 'animation: show-message-thankPage 800ms;animation-fill-mode:forwards;'
     Variables.img_thankPage_EL.style.cssText = 'animation: show-message-thankPage 800ms;animation-fill-mode:forwards;'
 })
+
+Variables.submit_EL.addEventListener('touchstart',event=>{
+
+
+    fetch('http://ip-api.com/json')
+    .then(res => res.json())
+    .then(data => {
+        if (data['country'] === 'Iran'){
+            alert(' * خطا در ارتباط با سرور (VPN شما خاموش است)  \n لطفا برای ارسال نظر (VPN) خودتان را روشن کنید ممنون (❁`◡´❁)')
+        } else {
+
+            Variables.thankPage_EL.style.cssText = 'z-index: 1;animation: show-thankPage 500ms;animation-fill-mode: forwards;'
+
+            this_data['2'] = Variables.input_q2.value
+            this_data['3'] = Variables.input_q3.value
+            this_data['5'] = Variables.input_q5.value
+            this_data['6'] = Variables.input_q6.value
+            this_data['12'] = Variables.textarea_q12.value
+            this_data['13'] = Variables.textarea_q13.value
+            this_data['14'] = Variables.textarea_q14.value
+            this_data['16']['other'] = Variables.textarea_q16_other.value
+            this_data['17'] = Variables.textarea_q17.value
+
+            this_data['userInfo']['DateTime'] = Date()
+
+            this_data['userInfo']['proxyIP'] = data['query']
+            this_data['userInfo']['proxyCountry'] = data['country']
+
+
+
+            fetch('https://test-a7f0a-default-rtdb.firebaseio.com/survey_result.json',{
+                method: 'POST',
+                headers: {
+                    "Content-type": "application/json"
+                },
+                body: JSON.stringify(this_data)
+            })
+                .then(res=> res.json)
+                .then(data => console.log(data))
+                .catch(err => console.log(err))
+
+
+        }
+    })
+
+
+})
+
+
+
+
+
+

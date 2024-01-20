@@ -58,7 +58,7 @@ body .main-page .thank-page .text {
   align-items: center;
   text-align: center;
   width: 100%;
-  margin-left: 180vw;
+  margin-left: 200vw;
 }
 body .main-page .thank-page .text span {
   font-size: 5vh;
@@ -68,7 +68,7 @@ body .main-page .thank-page img {
   width: 30vw;
   height: 30vw;
   margin-bottom: 40dvh;
-  margin-left: 180vw;
+  margin-left: 200vw;
   border-radius: 100%;
 }
 body .main-page .btn {
