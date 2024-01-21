@@ -12,20 +12,21 @@ let touchType = 'immobile'
 // rgb(255, 228, 196)   بیسکوییتی
 
 
-fetch('http://ip-api.com/json')
+fetch('https://api.ipapi.is?key=66f08bf39bd6a436')
     .then(res => res.json())
     .then(data => {
-        this_data['userInfo']['mainIP'] = data['query']
-        this_data['userInfo']['mainCountry'] = data['country']
-        if (data['country'] === 'Iran'){
+        this_data['userInfo']['mainIP'] = data['ip']
+        this_data['userInfo']['mainCountry'] = data['location']['country']
+        if (data['location']['country'] === 'Iran'){
 
             alert('لطفا برای ارسال نظر (VPN) خودتان را روشن کنید ممنون (❁`◡´❁)')
 
         } else {
-            this_data['userInfo']['proxyIP'] = data['query']
-            this_data['userInfo']['proxyCountry'] = data['country']
+            this_data['userInfo']['proxyIP'] = data['ip']
+            this_data['userInfo']['proxyCountry'] = data['location']['country']
         }
     })
+    .catch(err => console.log(err))
 
 
 
@@ -808,10 +809,10 @@ Variables.thankPage_EL.addEventListener('animationend',event=>{
 Variables.submit_EL.addEventListener('touchstart',event=>{
 
 
-    fetch('http://ip-api.com/json')
+    fetch('https://api.ipapi.is?key=66f08bf39bd6a436')
     .then(res => res.json())
     .then(data => {
-        if (data['country'] === 'Iran'){
+        if (data['location']['country'] === 'Iran'){
             alert(' * خطا در ارتباط با سرور (VPN شما خاموش است)  \n لطفا برای ارسال نظر (VPN) خودتان را روشن کنید ممنون (❁`◡´❁)')
         } else {
 
@@ -829,8 +830,8 @@ Variables.submit_EL.addEventListener('touchstart',event=>{
 
             this_data['userInfo']['DateTime'] = Date()
 
-            this_data['userInfo']['proxyIP'] = data['query']
-            this_data['userInfo']['proxyCountry'] = data['country']
+            this_data['userInfo']['proxyIP'] = data['ip']
+            this_data['userInfo']['proxyCountry'] = data['location']['country']
 
 
 
@@ -851,9 +852,5 @@ Variables.submit_EL.addEventListener('touchstart',event=>{
 
 
 })
-
-
-
-
 
 
